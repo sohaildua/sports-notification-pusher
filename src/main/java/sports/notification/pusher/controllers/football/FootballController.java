@@ -16,11 +16,8 @@ public class FootballController
 {
     private static final String LEAGUES_LIST_URL = "http://api.football-data.org/v4/competitions/";
 
-    private final RestTemplate restTemplate;
-
     public FootballController(final RestTemplate restTemplate)
     {
-        this.restTemplate = restTemplate;
     }
 
     // call the function and make it to football league
