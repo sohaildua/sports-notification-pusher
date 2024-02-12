@@ -18,6 +18,7 @@ public class FootballController
 {
     private static final String LEAGUES_LIST_URL = "http://api.football-data.org/v4/competitions/";
     private final Logger logger = LoggerFactory.getLogger(FootballController.class);
+
     private final RestTemplate restTemplate;
 
     public FootballController(final RestTemplate restTemplate)
