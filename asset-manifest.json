@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sohaildua/sports-notification-pusher.git/static/css/main.69797d76.css",
+    "main.js": "/sohaildua/sports-notification-pusher.git/static/js/main.bf9239fd.js",
+    "static/js/592.bf6ca574.chunk.js": "/sohaildua/sports-notification-pusher.git/static/js/592.bf6ca574.chunk.js",
+    "static/media/logo.svg": "/sohaildua/sports-notification-pusher.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/sohaildua/sports-notification-pusher.git/index.html",
+    "main.69797d76.css.map": "/sohaildua/sports-notification-pusher.git/static/css/main.69797d76.css.map",
+    "main.bf9239fd.js.map": "/sohaildua/sports-notification-pusher.git/static/js/main.bf9239fd.js.map",
+    "592.bf6ca574.chunk.js.map": "/sohaildua/sports-notification-pusher.git/static/js/592.bf6ca574.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69797d76.css",
+    "static/js/main.bf9239fd.js"
+  ]
+}
