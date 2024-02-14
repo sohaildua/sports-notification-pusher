@@ -2,6 +2,9 @@ package sports.notification.pusher.controllers.football;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +24,8 @@ public class FootballController
 
     private final RestTemplate restTemplate;
 
+    @Value("${football.api.key}")
+    private String apiKey;
     public FootballController(final RestTemplate restTemplate)
     {
         this.restTemplate = restTemplate;
@@ -29,7 +34,13 @@ public class FootballController
     @GetMapping("/leagues")
     public ResponseEntity<?> getFootballLeagues() {
         try {
-            final FootballDataResponse response = restTemplate.getForObject(LEAGUES_LIST_URL, FootballDataResponse.class);
+             final HttpHeaders headers = new HttpHeaders();
+             headers.set("X-Auth-Token", apiKey);
+
+        //Create a new HttpEntity
+            final HttpEntity<String> entity = new HttpEntity<String>(headers);
+
+            final FootballDataResponse response = restTemplate.getForObject(LEAGUES_LIST_URL, FootballDataResponse.class,entity);
             logger.debug("Response Entity: {}", response);
             return ResponseEntity.ok(response);
         } catch (final RestClientException e) {
