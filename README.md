@@ -1,1 +1,1 @@
-Sports Notification Pusher in Spring boot
+Sports Notification Pusher in Spring boot and frontend in react
